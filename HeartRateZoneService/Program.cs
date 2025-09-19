@@ -10,7 +10,6 @@ using HeartRateZoneService.Domain;
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
-
         services.Configure<ConsumerConfig>(hostContext.Configuration.GetSection("Consumer"));
         services.Configure<ProducerConfig>(hostContext.Configuration.GetSection("Producer"));
         services.Configure<SchemaRegistryConfig>(hostContext.Configuration.GetSection("SchemaRegistry"));
